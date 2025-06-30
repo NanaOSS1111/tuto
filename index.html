@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your 6-Month Python Adventure: A Visual Curriculum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -31px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #118AB2;
+            border: 3px solid #f0f9ff;
+        }
+         .timeline-line {
+            position: absolute;
+            top: 20px;
+            left: -22px;
+            width: 2px;
+            height: 100%;
+            background-color: #e0f2fe;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style="background-color: #f8fafc;">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#073B4C] mb-2">Your 6-Month Python Adventure 🐍</h1>
+            <p class="text-lg text-gray-600">A Visual Curriculum for Young Coders in Ghana</p>
+        </header>
+
+        <section id="overview" class="mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                 <h2 class="text-3xl font-bold text-[#073B4C] mb-4">An Engaging Journey into Code</h2>
+                <p class="text-gray-700">This curriculum is designed to transform a complete beginner into a confident young programmer. Over six months, the student will embark on a structured, project-based journey, learning the fundamentals of Python in a way that is fun, relatable, and culturally relevant.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-[#FF6B6B]">
+                    <p class="text-6xl font-extrabold text-[#073B4C]">6</p>
+                    <p class="text-xl font-semibold text-gray-700 mt-2">Months of Learning</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-[#FFD166]">
+                    <p class="text-6xl font-extrabold text-[#073B4C]">24</p>
+                    <p class="text-xl font-semibold text-gray-700 mt-2">Hands-On Sessions</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-[#06D6A0]">
+                    <p class="text-6xl font-extrabold text-[#073B4C]">6+</p>
+                    <p class="text-xl font-semibold text-gray-700 mt-2">Creative Projects</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="learning-journey" class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#073B4C] mb-2 text-center">Concept Progression</h3>
+                    <p class="text-gray-600 mb-6 text-center">The curriculum ensures a steady, manageable learning curve. Concepts start simple and gradually increase in complexity, preventing overwhelm and building a strong, layered foundation of knowledge over time.</p>
+                    <div class="chart-container">
+                        <canvas id="progressionChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#073B4C] mb-2 text-center">Core Concept Focus</h3>
+                    <p class="text-gray-600 mb-6 text-center">The plan is balanced to cover all essential areas of introductory programming, from foundational logic to creative and visual applications, ensuring a well-rounded skill set.</p>
+                    <div class="chart-container">
+                        <canvas id="conceptsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="milestones" class="mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                 <h2 class="text-3xl font-bold text-[#073B4C] mb-4">Monthly Milestones & Projects</h2>
+                <p class="text-gray-700">Each month introduces a new core programming concept, culminating in a fun, practical project that reinforces the lessons learned. This hands-on approach ensures students are not just learning theory, but actively building things from the very beginning.</p>
+            </div>
+             <div class="relative pl-8">
+                <div class="timeline-line"></div>
+                <div class="space-y-12">
+                    
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 1: Introduction to Programming</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> What is code, `print()`, variables, and simple math.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">🚀 **Project:** A Simple Command-Line Calculator</p>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 2: Logic and Decisions</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> `if/else` statements, comparisons, and booleans.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">🤔 **Project:** A Fun Quiz Game about Ghana</p>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 3: Loops and Repetition</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> `for` and `while` loops to repeat tasks automatically.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">🔢 **Project:** A Times Table Generator</p>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 4: Working with Data</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> Introduction to lists for storing collections of data.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">🛒 **Project:** An Interactive Ghanaian Market List App</p>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 5: Functions and Reuse</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> Writing functions to create reusable, organized code.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">📖 **Project:** A Creative Story Generator</p>
+                    </div>
+
+                    <div class="relative timeline-item">
+                        <h4 class="text-xl font-bold text-[#118AB2]">Month 6: Creative Projects</h4>
+                        <p class="text-gray-600 mt-1"><strong>Topics:</strong> Using Turtle graphics to draw shapes and patterns.</p>
+                        <p class="mt-2 p-3 bg-[#f0f9ff] text-[#075985] rounded-lg">🎨 **Project:** A Digital Artwork inspired by Kente patterns</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16">
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-[#073B4C] mb-2 text-center">Skills Gained by Completion</h3>
+                    <p class="text-gray-600 mb-6 text-center">By the end of this 6-month adventure, the student will have developed a versatile set of foundational programming skills, preparing them for more advanced topics and larger projects.</p>
+                    <div class="chart-container">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                     <h3 class="text-2xl font-bold text-[#073B4C] mb-4 text-center">Our Teaching Philosophy</h3>
+                     <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">💡</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-[#073B4C]">Project-Based Learning</h4>
+                                <p class="text-gray-600">We believe in learning by doing. Every concept is reinforced with a practical project, making learning tangible and rewarding.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-3xl">🇬🇭</div>
+                             <div>
+                                <h4 class="font-bold text-lg text-[#073B4C]">Cultural Relevance</h4>
+                                <p class="text-gray-600">Using Ghanaian analogies, foods like *Kelewele*, and local landmarks makes concepts more relatable and memorable for a young learner in Ghana.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start space-x-4">
+                            <div class="text-3xl">🎨</div>
+                             <div>
+                                <h4 class="font-bold text-lg text-[#073B4C]">Visual & Creative Coding</h4>
+                                <p class="text-gray-600">The curriculum concludes with graphics programming, showing students that code isn't just for calculation—it's a powerful tool for creativity and art.</p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gemini-features" class="mb-16 bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-3xl font-bold text-[#073B4C] mb-4 text-center">✨ Interactive Learning with Gemini ✨</h2>
+            <p class="text-gray-700 text-center mb-8">Tap into AI to get quick explanations or spark new project ideas!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-[#118AB2] mb-3">Ask a Python Question ✨</h3>
+                    <p class="text-gray-600 mb-4">Got a question about a Python concept? Type it below and get a simple, kid-friendly explanation!</p>
+                    <input type="text" id="pythonQuestionInput" placeholder="e.g., What is a variable?" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#118AB2] mb-4">
+                    <button id="askQuestionBtn" class="w-full bg-[#118AB2] text-white py-3 rounded-lg font-semibold hover:bg-[#0c6b8c] transition duration-300 shadow-md">Ask Question</button>
+                    <div id="questionResponse" class="mt-4 p-4 bg-[#e0f2fe] rounded-lg text-[#073B4C] min-h-[50px] flex items-center justify-center text-center">
+                        <span class="text-gray-500">Your answer will appear here!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-[#118AB2] mb-3">Get a New Project Idea ✨</h3>
+                    <p class="text-gray-600 mb-4">Feeling creative? Click the button to get a brand new Python project idea, perfect for your learning level!</p>
+                    <button id="generateProjectBtn" class="w-full bg-[#06D6A0] text-white py-3 rounded-lg font-semibold hover:bg-[#04a07a] transition duration-300 shadow-md">Generate Project Idea</button>
+                    <div id="projectIdeaResponse" class="mt-4 p-4 bg-[#e6ffee] rounded-lg text-[#073B4C] min-h-[50px] flex items-center justify-center text-center">
+                        <span class="text-gray-500">Your project idea will appear here!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-200">
+            <p class="text-gray-500">Ready to start the adventure? Let's code!</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const FONT_COLOR = '#073B4C';
+        const GRID_COLOR = '#d1d5db';
+
+        const wrapLabel = (str, maxWidth) => {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const TOOLTIP_CONFIG = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const progressionCtx = document.getElementById('progressionChart').getContext('2d');
+        new Chart(progressionCtx, {
+            type: 'line',
+            data: {
+                labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 5', 'Month 6'],
+                datasets: [{
+                    label: 'Concept Complexity',
+                    data: [2, 3, 5, 6, 8, 9],
+                    backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                    borderColor: '#FF6B6B',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Complexity Level', color: FONT_COLOR },
+                        grid: { color: GRID_COLOR },
+                        ticks: { color: FONT_COLOR }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: FONT_COLOR }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: TOOLTIP_CONFIG.plugins.tooltip
+                }
+            }
+        });
+
+        const conceptsCtx = document.getElementById('conceptsChart').getContext('2d');
+        const rawConceptLabels = [
+            'Intro & Basics', 'Logic & Decisions', 'Loops & Repetition', 
+            'Working with Data (Lists)', 'Functions & Reuse', 'Creative Graphics (Turtle)'
+        ];
+        new Chart(conceptsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: rawConceptLabels.map(label => wrapLabel(label, 16)),
+                datasets: [{
+                    label: 'Concept Focus',
+                    data: [15, 15, 15, 15, 20, 20],
+                    backgroundColor: ['#FF6B6B', '#FFD166', '#06D6A0', '#118AB2', '#4D9DE0', '#EF476F'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        position: 'bottom',
+                        labels: { 
+                            color: FONT_COLOR,
+                            boxWidth: 15,
+                            padding: 20,
+                             generateLabels: function(chart) {
+                                const data = chart.data;
+                                if (data.labels.length && data.datasets.length) {
+                                    return data.labels.map(function(label, i) {
+                                        const meta = chart.getDatasetMeta(0);
+                                        const ds = data.datasets[0];
+                                        const arc = meta.data[i];
+                                        const fill = ds.backgroundColor[i];
+                                        const text = Array.isArray(label) ? label.join(' ') : label;
+                                        return {
+                                            text: text,
+                                            fillStyle: fill,
+                                            strokeStyle: ds.borderColor,
+                                            lineWidth: ds.borderWidth,
+                                            hidden: isNaN(ds.data[i]) || meta.data[i].hidden,
+                                            index: i
+                                        };
+                                    });
+                                }
+                                return [];
+                            }
+                        }
+                    },
+                    tooltip: TOOLTIP_CONFIG.plugins.tooltip
+                }
+            }
+        });
+
+        const skillsCtx = document.getElementById('skillsChart').getContext('2d');
+        new Chart(skillsCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Problem Solving', 'Logical Thinking', 'Code Structure', ['Data Handling', '(Lists)'], 'Code Reuse', 'Creative Coding'],
+                datasets: [{
+                    label: 'Acquired Skill Level',
+                    data: [8, 9, 7, 8, 9, 10],
+                    backgroundColor: 'rgba(17, 138, 178, 0.2)',
+                    borderColor: '#118AB2',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#118AB2',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#118AB2'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 10,
+                        angleLines: { color: GRID_COLOR },
+                        grid: { color: GRID_COLOR },
+                        pointLabels: { 
+                            color: FONT_COLOR,
+                            font: {
+                                size: 12
+                            }
+                        },
+                        ticks: {
+                            color: FONT_COLOR,
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            stepSize: 2
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: TOOLTIP_CONFIG.plugins.tooltip
+                }
+            }
+        });
+
+        async function callGeminiAPI(prompt, outputElement) {
+            outputElement.innerHTML = '<span class="text-gray-500">Loading...</span>';
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            const payload = { contents: chatHistory };
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputElement.innerText = text;
+                } else {
+                    outputElement.innerText = 'Could not get a response. Please try again.';
+                }
+            } catch (error) {
+                console.error('Error calling Gemini API:', error);
+                outputElement.innerText = 'An error occurred. Please check your connection or try again later.';
+            }
+        }
+
+        document.getElementById('askQuestionBtn').addEventListener('click', () => {
+            const question = document.getElementById('pythonQuestionInput').value;
+            if (question.trim() === '') {
+                document.getElementById('questionResponse').innerText = 'Please enter a question.';
+                return;
+            }
+            const prompt = `Explain "${question}" in Python for a 10-year-old, using a simple analogy related to daily life or Ghana if possible. Keep the explanation concise and easy to understand.`;
+            callGeminiAPI(prompt, document.getElementById('questionResponse'));
+        });
+
+        document.getElementById('generateProjectBtn').addEventListener('click', () => {
+            const currentTopics = "variables, if/else statements, loops, lists, functions, and basic Turtle graphics";
+            const prompt = `Generate a very simple and fun Python coding project idea for a 10-year-old, suitable for a beginner who has covered topics like ${currentTopics}. The project should ideally have a theme related to Ghanaian culture or common interests of kids (games, stories, etc.). Provide a short project name and a brief description. Do not include code.`;
+            callGeminiAPI(prompt, document.getElementById('projectIdeaResponse'));
+        });
+    </script>
+</body>
+</html>
